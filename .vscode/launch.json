@@ -1,0 +1,401 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+
+            "console": "internalConsole"
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Conecta_BDD",
+            "request": "launch",
+            "mainClass": "conectaBD.Conecta_BDD",
+            "projectName": "BBDD_JDBC"
+        },
+        {
+            "type": "java",
+            "name": "Launch modifica_BDD",
+            "request": "launch",
+            "mainClass": "conectaBD.modifica_BDD",
+            "projectName": "BBDD_JDBC"
+        },
+        {
+            "type": "java",
+            "name": "Launch BusquedaBinaria",
+            "request": "launch",
+            "mainClass": "ejemplos_teoria.BusquedaBinaria",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejemplos",
+            "request": "launch",
+            "mainClass": "ejemplos_teoria.Ejemplos",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch MetodoSeleccion",
+            "request": "launch",
+            "mainClass": "ejemplos_teoria.MetodoSeleccion",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio1",
+            "request": "launch",
+            "mainClass": "practico1.Ejercicio1",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio2",
+            "request": "launch",
+            "mainClass": "practico1.Ejercicio2",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio3",
+            "request": "launch",
+            "mainClass": "practico1.Ejercicio3",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio4",
+            "request": "launch",
+            "mainClass": "practico1.Ejercicio4",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio4(1)",
+            "request": "launch",
+            "mainClass": "practico2.Ejercicio4",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto1",
+            "request": "launch",
+            "mainClass": "practico2.punto1",
+            "projectName": "Modulo_1"
+            
+        },
+        {
+            "type": "java",
+            "name": "Launch punto11",
+            "request": "launch",
+            "mainClass": "practico2.punto11",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto2",
+            "request": "launch",
+            "mainClass": "practico2.punto2",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto3",
+            "request": "launch",
+            "mainClass": "practico2.punto3",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto4",
+            "request": "launch",
+            "mainClass": "practico2.punto4",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto5",
+            "request": "launch",
+            "mainClass": "practico2.punto5",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto6",
+            "request": "launch",
+            "mainClass": "practico2.punto6",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto7",
+            "request": "launch",
+            "mainClass": "practico2.punto7",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto8",
+            "request": "launch",
+            "mainClass": "practico2.punto8",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch punto_2",
+            "request": "launch",
+            "mainClass": "practico2.punto_2",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio1",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio1",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio10",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio10",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio11",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio11",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio16",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio16",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio1b",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio1b",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio2",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio2",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio3",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio3",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio4",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio4",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio8",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio8",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejercicio9",
+            "request": "launch",
+            "mainClass": "practico3.ejercicio9",
+            "projectName": "Modulo_1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Autos",
+            "request": "launch",
+            "mainClass": "ejemplos_teoria.Autos",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejemplo",
+            "request": "launch",
+            "mainClass": "ejemplos_teoria.ejemplo",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "ejemplos_teoria.main",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch DirectorCine",
+            "request": "launch",
+            "mainClass": "tp1.DirectorCine",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Persona",
+            "request": "launch",
+            "mainClass": "tp1.Persona",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main(1)",
+            "request": "launch",
+            "mainClass": "tp1.main",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch testEjercicio",
+            "request": "launch",
+            "mainClass": "tp1.testEjercicio",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Autos(1)",
+            "request": "launch",
+            "mainClass": "tp2.Autos",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Contador",
+            "request": "launch",
+            "mainClass": "tp2.Contador",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cuenta",
+            "request": "launch",
+            "mainClass": "tp2.Cuenta",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumerosEnteros",
+            "request": "launch",
+            "mainClass": "tp2.NumerosEnteros",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Persona(1)",
+            "request": "launch",
+            "mainClass": "tp2.Persona",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Serie",
+            "request": "launch",
+            "mainClass": "tp2.Serie",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Taxi",
+            "request": "launch",
+            "mainClass": "tp2.Taxi",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main(2)",
+            "request": "launch",
+            "mainClass": "tp2.main",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main2",
+            "request": "launch",
+            "mainClass": "tp2.main2",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main3",
+            "request": "launch",
+            "mainClass": "tp2.main3",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tarjeta",
+            "request": "launch",
+            "mainClass": "tp3.Tarjeta",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "tp3.Test",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main(3)",
+            "request": "launch",
+            "mainClass": "tp3.main",
+            "projectName": "Modulo_2"
+        },
+        {
+            "type": "java",
+            "name": "Launch main2(1)",
+            "request": "launch",
+            "mainClass": "tp3.main2",
+            "projectName": "Modulo_2"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+package trabajo_pratico;
+
+public class ejercicio_16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		base_2(65);
+	}
+	
+	
+	
+	public static int base_2(int numero) {
+		
+		while(numero > 2) {
+			int resto = numero % 2;
+			System.out.println("valor resto: " + resto);
+			numero = numero / 2;
+			System.out.println("valor division: " + numero);
+			
+		}
+		return 0;
+	}
+
+}

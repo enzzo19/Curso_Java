@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Conexion_BDD.java&apos; to &apos;Prueba_BDD/src/conectaBD&apos;&#x0D;&#x0A;- Original project: &apos;Conexion_BDD&apos;&#x0D;&#x0A;- Destination element: &apos;Prueba_BDD/src/conectaBD&apos;&#x0D;&#x0A;- Original element: &apos;conectaBD.Conexion_BDD.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=Prueba_BDD/src&lt;conectaBD" element1="/src&lt;conectaBD{Conexion_BDD.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1654089235567" units="1" version="1.0"/>
+</session>

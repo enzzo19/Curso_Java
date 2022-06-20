@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;conectaBD.Conecta_Productos&apos; to &apos;Conecta_BDD&apos;&#x0D;&#x0A;- Original project: &apos;BBDD_JDBC&apos;&#x0D;&#x0A;- Original element: &apos;conectaBD.Conecta_Productos&apos;&#x0D;&#x0A;- Renamed element: &apos;conectaBD.Conecta_BDD&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Conecta_Productos&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;conectaBD{Conecta_Productos.java[Conecta_Productos" matchStrategy="1" name="Conecta_BDD" qualified="false" references="true" similarDeclarations="false" stamp="1650239034931" textual="false" version="1.0"/>
+</session>

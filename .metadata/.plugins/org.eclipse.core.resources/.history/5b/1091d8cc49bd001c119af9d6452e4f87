@@ -1,0 +1,33 @@
+package conectaBD;
+import java.sql.*;
+public class Conecta_Productos {
+	public static void main(String[] args) {
+		
+		try {
+			
+			//1_ CREAR LA CONEXION
+			Connection miConexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/productos", "root", "");
+			
+			//2_ CREAR OBJETO STATEMENT
+			Statement miStatement = miConexion.createStatement();
+			
+			//3_ EJECUTAR LA INSTRUCCION SQL
+			ResultSet miResultset =  miStatement.executeQuery("SELECT * FROM galletas");
+			
+			//4_ RECORRER EL RESULTSET
+			
+			while(miResultset.next()) {
+				
+				System.out.println(miResultset.getString("nombre") +" " + miResultset.getString("precio"));
+				
+			}
+			
+		}catch(Exception e){
+			
+			System.out.println("No conecta");
+			e.printStackTrace();
+		
+		}
+		
+	}
+}

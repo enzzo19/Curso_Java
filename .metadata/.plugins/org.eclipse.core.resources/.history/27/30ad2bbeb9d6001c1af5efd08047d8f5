@@ -1,0 +1,42 @@
+package trabajo_pratico;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ejercicio_6 {
+	public static File Constructor_1(){
+        // Crea un Objeto File asociado al fichero "fichero.txt" que se encuentra en el directorio de trabajo:
+        File fichero = new File("fichero_1.txt"); //=>> "Fichero.txt se llama RUTA RELATIVA"
+        //En este caso no se indica path. Se supone que el fichero se encuentra en el directorio actual de trabajo.
+        //MOSTRAR EJEMPLO DE RUTA ABSOLUTA
+        return fichero;
+    }
+	
+	public static void escribir (String direccion) throws Exception{
+		FileWriter archivo = null;
+        BufferedWriter texto = null;
+        try{
+            archivo = new FileWriter(direccion);
+            texto = new BufferedWriter(archivo);
+            System.out.println("Carando los Numeros Naturales...");
+            for (int i = 1; i < 101; i++) {
+            	texto.write(i);
+            	if((i % 10) == 0) {
+            		texto.newLine();
+            	}else {
+            		texto.write(" ");
+            	}
+            }
+        }
+	}
+	
+	public static void main (String args[]) {
+		
+	}
+
+}
