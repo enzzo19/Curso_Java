@@ -4764,3 +4764,9 @@ java.io.FileNotFoundException: C:\Users\enzzo\.eclipse\org.eclipse.oomph.setup\s
 
 !ENTRY org.eclipse.oomph.setup.ui 1 0 2022-06-27 03:15:42.077
 !MESSAGE Setup tasks were performed during startup. See 'C:\Users\enzzo\jee-latest-released\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-06-27 03:19:15.282
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-06-27 03:19:15.283
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
