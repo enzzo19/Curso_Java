@@ -143,11 +143,11 @@ public class Persona {
 	public void setEstudios(String estudios) {
 		this.estudios = estudios;
 	}
-	public int getAÃ±o_curso() {
-		return aÃ±o_curso;
+	public int getaño_curso() {
+		return año_curso;
 	}
-	public void setAÃ±o_curso(int aÃ±o_curso) {
-		this.aÃ±o_curso = aÃ±o_curso;
+	public void setaño_curso(int año_curso) {
+		this.año_curso = año_curso;
 	}
 	public void setEdad(int edad) {
 		this.edad = edad;

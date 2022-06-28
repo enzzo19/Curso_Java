@@ -8,9 +8,9 @@ public class Agenda {
 		this.contactos = new Contacto[10];
 	}
 	
-	public Agenda(int tamaÃ±o) {
-		if (tamaÃ±o > 0) {
-			this.contactos = new Contacto[tamaÃ±o];
+	public Agenda(int tamaño) {
+		if (tamaño > 0) {
+			this.contactos = new Contacto[tamaño];
 		}else {
 			this.contactos = new Contacto[10];
 		}
