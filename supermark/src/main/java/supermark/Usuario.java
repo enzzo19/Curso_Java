@@ -1,67 +1,96 @@
 package supermark;
 
-import java.time.LocalDate;
+import java.util.Date;
 
-public class Usuario{
-	
-	
-	public enum Rol {
-		CLIENTE,ADMINISTRACION;
-	}
-
-
-	private int userid;
-	private Rol rol_usuario;
-	private String username;
-	private String password;
+public class Usuario {
+	private int id_usuario;
+	private String nombre;
+	private String apellido;
+	private boolean esAdministrador;
 	private String email;
-	private LocalDate fecha_alta;
-	public static int id_siguiente=1;
+	private Date fecha_nacimiento;
+	private String dni;
+	private String apodo;
 	
-	public Usuario(String nombre,String password,String rs,String email) {
+	public Usuario() {
 		
-		this.username=nombre;
-		this.password=password;
-		try {
-			this.rol_usuario=Rol.valueOf(rs.toUpperCase());
-		} catch (Exception e) {
-			System.out.println("debe ingresar un rol valido");
+	}
+	
+	public Usuario(int id_usuario, String nombre, String apellido, boolean esAdministrador, String email,
+			Date fecha_nacimiento, String dni) {
+		super();
+		this.id_usuario = id_usuario;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.esAdministrador = esAdministrador;
+		this.email = email;
+		this.fecha_nacimiento = fecha_nacimiento;
+		this.dni = dni;
+		this.apodo = "cachito";
+	}
+	
+	public int getId_usuario() {
+		return id_usuario;
+	}
+
+	public void setId_usuario(int id_usuario) {
+		this.id_usuario = id_usuario;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public boolean isEsAdministrador() {
+		return esAdministrador;
+	}
+
+	public void setEsAdministrador(boolean esAdministrador) {
+		this.esAdministrador = esAdministrador;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Date getFecha_nacimiento() {
+		return fecha_nacimiento;
+	}
+
+	public void setFecha_nacimiento(Date fecha_nacimiento) {
+		this.fecha_nacimiento = fecha_nacimiento;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id_usuario=" + id_usuario + ", nombre=" + nombre + ", apellido=" + apellido
+				+ ", esAdministrador=" + esAdministrador + ", email=" + email + ", fecha_nacimiento=" + fecha_nacimiento
+				+ ", dni=" + dni + "]";	
 		}
-		this.fecha_alta=LocalDate.now();
-		this.email=email;
-		this.userid=id_siguiente;
-		this.id_siguiente++;
-	}
 	
-	
-	public int getUserid() {
-		return userid;
-	}
-
-
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-
-
-	public LocalDate getFecha_alta() {
-		return fecha_alta;
-	}
-
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String nombre) {
-		this.username = nombre;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 }
+	
