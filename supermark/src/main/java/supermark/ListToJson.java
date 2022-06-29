@@ -10,9 +10,7 @@ public class ListToJson {
 		foo.add("B");
 		foo.add("C");
 
-		String json = new Gson().toJson(foo );
+		String json = new Gson().toJson(foo);
 		System.out.println(json.toString());
-
 	}
-
 }
