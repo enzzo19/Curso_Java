@@ -16,7 +16,7 @@ public class App {
 	       String str = "{\"name\":\"John\",\"age\":\"30\"}";
            JSONObject jsonObject = new JSONObject(str);
            System.out.println("OBJECT : "+ jsonObject.toString());
-	       get("/saludo", (req,res) -> jsonObject);
+	       get("/consulta", (req,res) -> jsonObject);
 	   }
 }
 

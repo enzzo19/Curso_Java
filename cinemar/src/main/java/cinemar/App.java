@@ -10,11 +10,11 @@ public class App{
 	   PropertyConfigurator.configure(log4jConfPath);
        Gson mapper= new Gson();
        // port(8080);
-       Clasificacion clasi = new Clasificacion(1, 14, "ESta pelicula es apta para mayores de +14 años");
+       Clasificacion clasi = new Clasificacion(1, 14, "Esta pelicula es apta para mayores de +14 años");
        TipoPelicula tipo = new TipoPelicula(1, "Espanish", "3D", false);
        Pelicula mi_peli = new Pelicula(1, "Jurasick Park", "Aparecen dinosaurios", "accion_fantasia", "120", "Brad Pit", "Spilver", tipo, clasi);
-       get("/info_pelicula", (req,res) -> mi_peli, mapper::toJson);
-       get("/tipo_pelicula", (req,res) -> mi_peli.getId_tipo_pelicula(), mapper::toJson);
-       get("/clasificacion_pelicula", (req,res) -> mi_peli.getId_clasificacion(), mapper::toJson);
+       get("/Pelicula/info_pelicula", (req,res) -> mi_peli, mapper::toJson);
+       get("/Pelicula/tipo_pelicula", (req,res) -> mi_peli.getId_tipo_pelicula(), mapper::toJson);
+       get("/Pelicula/clasificacion_pelicula", (req,res) -> mi_peli.getId_clasificacion(), mapper::toJson);
    }
 } 
