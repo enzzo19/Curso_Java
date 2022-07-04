@@ -1,17 +1,18 @@
 package cinemar;
 
-
 import static spark.Spark.get;
-
+import java.util.Date;
 import java.sql.*;
 import org.json.JSONObject;
 
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+
 import org.apache.log4j.PropertyConfigurator;
 import org.json.JSONException;
 
-public class Conexion_BDD {
+public class JsonUsuario_2 {
 	
 	static //  Registrar JDBC Driver
 	// JDBC nombre del driver y URL de la BDD
@@ -26,6 +27,8 @@ public class Conexion_BDD {
 		 Connection conn = null;
 		 Statement stmt = null;
 		 JSONObject jo = new JSONObject();
+		 ArrayList<Usuario> mis_usuarios = new ArrayList();
+		 
 		 try{
 		 //PASO 2: Registrar JDBC driver
 		 Class.forName(JDBC_DRIVER);
@@ -38,23 +41,23 @@ public class Conexion_BDD {
 		 System.out.println("Creating statement...");
 		 stmt = conn.createStatement();
 		 String sql;
-		 sql = "SELECT id_descuento,dia,porcentaje,precioFinal FROM descuento;";
+		 sql = "SELECT id_usuario,nombre,apellido,esAdministrador,email,fecha_nacimiento,dni FROM Usuario;";
 		 ResultSet rs = stmt.executeQuery(sql);
 		 
 		 //STEP 5: Extraer datos del ResultSet
 		 while(rs.next()){
 		 //Recibir por tipo de columna
-			 int id_descuento = rs.getInt("id_descuento");
-			 String dia = rs.getString("dia");
-			 float porcentaje = rs.getFloat("porcentaje");
-			 int precioFinal = rs.getInt("precioFinal");
-			 System.out.println("id_descuento: "+ id_descuento + " dia: " + dia + " porcentaje: " + porcentaje + "%"+" precioFinal: " + "$"+precioFinal);
+			 int id_usuario = rs.getInt("id_usuario");
+			 String nombre = rs.getString("nombre");
+			 String apellido = rs.getString("apellido");
+			 boolean esAdministrador = rs.getBoolean("esAdministrador");
+			 String email = rs.getString("email");
+			 Date fecha_nacimiento = rs.getDate("fecha_nacimiento");
+			 String dni = rs.getString("dni");
+			 System.out.println("id_usuario: "+ id_usuario + " nombre: " + nombre + " apellido: " + apellido + " esAdministrador: " +esAdministrador+" email: " +email+" fecha_nacimiento: " +fecha_nacimiento+" dni: " +dni);
 			 
-			 jo.put("id_descuento", id_descuento);
-			 jo.put("dia", dia);
-			 jo.put("porcentaje", porcentaje);
-			 jo.put("precio_final", precioFinal);
-			 System.out.println(jo);
+			 Usuario mi_usuario = new Usuario(id_usuario, nombre, apellido, esAdministrador, email, fecha_nacimiento, dni);
+			 mis_usuarios.add(mi_usuario); 
 		 }
 		 //PASO6: Entorno de Limpieza
 		 rs.close();
@@ -80,11 +83,10 @@ public class Conexion_BDD {
 		 se.printStackTrace();
 		 	} //cierra finally try
 		 } //cierra try
-		 String ruta = "C:/Users/enzzo/eclipse-workspace";
-		  String log4jConfPath = ruta + "/Curso_Java/supermark/to/log4j.properties";
+		  String log4jConfPath = mi_credi.path + "/cinemar/to/log4j.properties"; //cambiar el path
 		   PropertyConfigurator.configure(log4jConfPath);
-	       Gson mapper= new Gson();
-	      get("/consulta", (req,res) -> jo);
+		  String json = new Gson().toJson(mis_usuarios);
+	      get("/usuario", (req,res) -> json);
 		 System.out.println("Goodbye!");
 		 
 	} // cierra metodo principal (main)

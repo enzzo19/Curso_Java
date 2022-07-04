@@ -8,12 +8,14 @@ public class Credenciales {
 	// Credenciales de la BDD
 	 public String USER;
 	 public String PASS;
+	 public String path;
 	 
 	 public Credenciales(){
 		 this.JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 		 this.DB_URL = "jdbc:mysql://localhost:3306/cinemark2";
 		 this.USER = "root";
 		 this.PASS = "123456789aA#987654321";
+		 this.path = "C:/Users/enzzo/eclipse-workspace/Curso_Java";
 	 }
 
 }
