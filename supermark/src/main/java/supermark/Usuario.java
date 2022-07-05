@@ -5,28 +5,19 @@ import java.util.Date;
 public class Usuario {
 	private int id_usuario;
 	private String nombre;
-	private String apellido;
 	private boolean esAdministrador;
-	private String email;
-	private Date fecha_nacimiento;
-	private String dni;
-	private String apodo;
+	private String clave;
 	
 	public Usuario() {
 		
 	}
 	
-	public Usuario(int id_usuario, String nombre, String apellido, boolean esAdministrador, String email,
-			Date fecha_nacimiento, String dni) {
+	public Usuario(int id_usuario, String nombre, boolean esAdministrador, String clave) {
 		super();
 		this.id_usuario = id_usuario;
 		this.nombre = nombre;
-		this.apellido = apellido;
 		this.esAdministrador = esAdministrador;
-		this.email = email;
-		this.fecha_nacimiento = fecha_nacimiento;
-		this.dni = dni;
-		this.apodo = "cachito";
+		this.clave = clave;
 	}
 	
 	public int getId_usuario() {
@@ -45,13 +36,6 @@ public class Usuario {
 		this.nombre = nombre;
 	}
 
-	public String getApellido() {
-		return apellido;
-	}
-
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
 
 	public boolean isEsAdministrador() {
 		return esAdministrador;
@@ -61,36 +45,7 @@ public class Usuario {
 		this.esAdministrador = esAdministrador;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Date getFecha_nacimiento() {
-		return fecha_nacimiento;
-	}
-
-	public void setFecha_nacimiento(Date fecha_nacimiento) {
-		this.fecha_nacimiento = fecha_nacimiento;
-	}
-
-	public String getDni() {
-		return dni;
-	}
-
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-
-	@Override
-	public String toString() {
-		return "Usuario [id_usuario=" + id_usuario + ", nombre=" + nombre + ", apellido=" + apellido
-				+ ", esAdministrador=" + esAdministrador + ", email=" + email + ", fecha_nacimiento=" + fecha_nacimiento
-				+ ", dni=" + dni + "]";	
-		}
+	
 	
 }
 	
