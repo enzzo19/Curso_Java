@@ -11,4 +11,5 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.text.MessageFormat"/>
 </qualifiedTypeNameHistroy>

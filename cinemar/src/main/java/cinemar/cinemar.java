@@ -6,7 +6,7 @@ public class cinemar {
 		// TODO Auto-generated method stub
 		
 		Descuento mi_dec = new Descuento();
-		mi_dec.cambia_descuento("'Martes'", 0.9);
+		mi_dec.cambia_descuento_dia("'Martes'", 0.1);
 
 	}
 

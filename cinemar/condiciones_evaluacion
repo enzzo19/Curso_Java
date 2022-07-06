@@ -1,0 +1,19 @@
+Cosa a Evaluar en los epositorios:
+	* Participacion del Grupo:
+		* Viendo el historico de los proyectos
+	* Estado de los Proyectos:
+		* Diagrama de Clases
+		* Diagrama de Entidad Relacion (DER)
+		* Clases en Codigo JAVA
+		* Script de BDD: (ya sea en SQL O en JDBC)
+			* Creacion de la BDD
+			* Insertar Valores en BDD
+		* API rest
+			* get para los constructores de las clases
+			* get para consultas en la BDD
+		* Logica del programa del proyecto
+			* Funciones
+			* Consultas
+			* Modificaciones
+			* Menu
+	

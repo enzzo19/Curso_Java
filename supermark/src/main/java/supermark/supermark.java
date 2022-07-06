@@ -5,9 +5,16 @@ public class supermark {
 	
 	public static void main(String args[]) {
 		
-		Usuario mi_usuario = new Usuario();
+		//Usuario.inserta_usuario("'Diego'", "34343434", true);
 		
-		mi_usuario.modifica_admin();
+		String nombre = "enzzo19";
+		String contraseña = "1234567890";
+		
+		
+		
+		System.out.println(Usuario.login("'" + nombre + "'", contraseña));
+		
+		//Usuario.elimina_usuario(5);
 		
 	}
 

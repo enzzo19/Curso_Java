@@ -61,7 +61,7 @@ public class Descuento {
 				+ ", precioFinal=" + precioFinal + "]";
 	}
 
-	public static void cambia_descuento(String dia, double porcentaje) {
+	public static void cambia_descuento_dia(String dia, double porcentaje) {
 		
 	//  Registrar JDBC Driver
 			// JDBC nombre del driver y URL de la BDD
