@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.MessageFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Usuario {
 	private int id_usuario;
@@ -189,11 +191,14 @@ public class Usuario {
 			 //PASO 4: Ejecutar una consulta SQL
 			 System.out.println("Creating statement...");
 			 stmt = conn.createStatement();
-			 String sql =  MessageFormat.format("INSERT INTO Usuarios (usuario, clave, administrador) VALUES ({0}, {1}, {2});", nombre, clave, is_admin);
-			 System.out.println(sql);
-			 stmt.executeUpdate(sql);
+			 if (Usuario.validacion_nombre_usuario(nombre) && Usuario.valida_contraseña(clave)) {
+				 String sql =  MessageFormat.format("INSERT INTO Usuarios (usuario, clave, administrador) VALUES ({0}, {1}, {2});", nombre, clave, is_admin);
+				 stmt.executeUpdate(sql);
+				 System.out.println("Valores Insertados con Exito");
+			 }else {
+				 System.out.println("No se pudo insertar los valores");
+			 }
 			 
-			 System.out.println("Valores INSERTADOS con exito :) !");
 			 
 			 //PASO6: Entorno de Limpieza
 			 stmt.close();
@@ -289,7 +294,139 @@ public class Usuario {
 			 return false;
 		
 	}
-
+	
+	public static boolean validacion_nombre_usuario(String nombre){
+		 //  Registrar JDBC Driver
+		// JDBC nombre del driver y URL de la BDD
+			Credenciales mi_credi = new Credenciales();
+			String JDBC_DRIVER = mi_credi.JDBC_DRIVER; 
+			String DB_URL = mi_credi.DB_URL;
+		 // Credenciales de la BDD
+			String USER = mi_credi.USER;
+			String PASS = mi_credi.PASS;
+			
+			 Connection conn = null;
+			 Statement stmt = null;
+			 
+			 try{
+			 //PASO 2: Registrar JDBC driver
+			 Class.forName(JDBC_DRIVER);
+			 
+			 //PASO3: Abrir una Conexion
+			 System.out.println("Connecting to database...");
+			 conn = DriverManager.getConnection(DB_URL,USER,PASS);
+			 
+			 //PASO 4: Ejecutar una consulta SQL
+			 System.out.println("Creating statement...");
+			 stmt = conn.createStatement();
+			 String sql = "SELECT * FROM usuarios";
+			 ResultSet rs = stmt.executeQuery(sql);
+			 nombre = nombre.replace("'", "");
+			 //STEP 5: Extraer datos del ResultSet
+			 while(rs.next()){
+				 String nombre_tupla = rs.getString("usuario");
+				 // System.out.println(nombre_tupla);
+				 if (nombre.equals(nombre_tupla)){
+					 return false;
+				 }
+			 }
+			 
+			 //PASO6: Entorno de Limpieza
+			 stmt.close();
+			 conn.close();
+			 }catch(SQLException se){
+				 // Resolver errores para JDBC
+				 se.printStackTrace();
+			 }catch(Exception e){
+				 // Resolver errores para Class.forName
+				 e.printStackTrace();
+			 }finally{
+			 // Bloque finalmente utilizado para cerrar recursos
+			 try{
+				 if(stmt!=null)
+					 stmt.close();
+			 }catch(SQLException se2){
+			 }// Nada que podamos hacer
+			 try{
+				 if(conn!=null)
+					 conn.close();
+			 }catch(SQLException se){
+			 se.printStackTrace();
+			 	} //cierra finally try
+			 } //cierra try
+			 System.out.println("Goodbye!");
+			 return true;
+		
+	}
+	
+	
+	public static boolean valida_contraseña(String contraseña) {
+		Pattern pat = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&#'])[A-Za-z\\d$@$!%*?&#']{8,15}");
+	    Matcher mat = pat.matcher(contraseña);                                                                           
+	     if (mat.matches()) {
+	         return true;
+	     } else {
+	         return false;                                                                                
+	     }
+	}
+	
+	public static void inserta_usuario_producto(String nombre, String clave, boolean is_admin, double stock, double precio, String rubro){
+		 //  Registrar JDBC Driver
+		// JDBC nombre del driver y URL de la BDD
+			Credenciales mi_credi = new Credenciales();
+			String JDBC_DRIVER = mi_credi.JDBC_DRIVER; 
+			String DB_URL = mi_credi.DB_URL;
+		 // Credenciales de la BDD
+			String USER = mi_credi.USER;
+			String PASS = mi_credi.PASS;
+			
+			 Connection conn = null;
+			 Statement stmt = null;
+			 
+			 try{
+			 //PASO 2: Registrar JDBC driver
+			 Class.forName(JDBC_DRIVER);
+			 
+			 //PASO3: Abrir una Conexion
+			 System.out.println("Connecting to database...");
+			 conn = DriverManager.getConnection(DB_URL,USER,PASS);
+			 
+			 //PASO 4: Ejecutar una consulta SQL
+			 System.out.println("Creating statement...");
+			 stmt = conn.createStatement();
+			 String sql =  MessageFormat.format("INSERT INTO Usuarios (usuario, clave, administrador) VALUES ({0}, {1}, {2});", nombre, clave, is_admin);
+			 stmt.executeUpdate(sql);
+			 System.out.println("Valores Insertados con Exito en tabla usuario");
+			 sql =  MessageFormat.format("INSERT INTO productos (stock, precio, rubro) VALUES ({0}, {1}, {2});", stock, precio, rubro);
+			 stmt.executeUpdate(sql);
+			 System.out.println("Valores Insertados con Exito en tabla productos");
+			 
+			 //PASO6: Entorno de Limpieza
+			 stmt.close();
+			 conn.close();
+			 }catch(SQLException se){
+				 // Resolver errores para JDBC
+				 se.printStackTrace();
+			 }catch(Exception e){
+				 // Resolver errores para Class.forName
+				 e.printStackTrace();
+			 }finally{
+			 // Bloque finalmente utilizado para cerrar recursos
+			 try{
+				 if(stmt!=null)
+					 stmt.close();
+			 }catch(SQLException se2){
+			 }// Nada que podamos hacer
+			 try{
+				 if(conn!=null)
+					 conn.close();
+			 }catch(SQLException se){
+			 se.printStackTrace();
+			 	} //cierra finally try
+			 } //cierra try
+			 System.out.println("Goodbye!");
+		
+	}
 	
 }
 	

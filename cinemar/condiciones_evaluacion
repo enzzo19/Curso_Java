@@ -1,8 +1,8 @@
-Cosa a Evaluar en los epositorios:
+Cosas a Evaluar en los repositorios:
 	* Participacion del Grupo:
-		* Viendo el historico de los proyectos
+		* Viendo el historico de los proyectos 
 	* Estado de los Proyectos:
-		* Diagrama de Clases
+		* Diagrama de Clases 
 		* Diagrama de Entidad Relacion (DER)
 		* Clases en Codigo JAVA
 		* Script de BDD: (ya sea en SQL O en JDBC)
@@ -13,7 +13,8 @@ Cosa a Evaluar en los epositorios:
 			* get para consultas en la BDD
 		* Logica del programa del proyecto
 			* Funciones
-			* Consultas
-			* Modificaciones
-			* Menu
-	
+			* Consultas en BDD
+			* Modificaciones en BDD
+			* Menu de Navegacion
+			
+Dia de presentacion: 10-07-2022 a 23:59hs
